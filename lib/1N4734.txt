@@ -1,0 +1,21 @@
+*$
+.model D1N4734 D(Is=1.214f Rs=1.078 Ikf=0 N=1 Xti=3 Eg=1.11
++ Cjo=185p M=.3509 Vj=.75 Fc=.5 Isr=2.601n Nr=2 Bv=5.1 Ibv=.70507
++ Nbv=.74348 Ibvl=4.8274m Nbvl=6.7393 Tbv1=176.471u)
+* Motorola pid=1N4733 case=DO-41
+* 89-9-19 gjg
+* Vz = 5.6 @ 45mA, Zz = 175 @1mA, Zz = 8.2 @5mA, Zz = 2.2 @20mA
+*$ Thanks!
+
+****
+.SUBCKT MyZENER 1 2 PARAMS: BV=10 IBV=1m RS=1 IS=10f
+D1 1 2 DZ
+.MODEL DZ D(
++ IS = {IS}
++ RS = {RS}
++ N = 1
++ EG = 1.11
++ BV = {BV}
++ IBV = {IBV} )
+.ENDS MyZENER
+****
