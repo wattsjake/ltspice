@@ -1,0 +1,12 @@
+* C:\Users\Jacob\Documents\ltspice-git\ece4010-ofdr-wattsjake\trans_impedance_op.asc
+XU1 0 Iin VCC VEE Vout LM358
+R1 Vout Iin 1.3k
+R2 0 Vout 10k
+V1 VCC 0 15
+V2 0 VEE 15
+I1 Iin 0 SINE(0 0.01 1k)
+* Transimpedance Amplifier Draft
+.lib C:\Users\Jacob\Documents\ltspice-git\lib\LM358.lib
+.tran 10m
+.backanno
+.end
